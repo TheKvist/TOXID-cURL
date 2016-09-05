@@ -17,7 +17,7 @@ class toxid_curl_oxseodecoder extends toxid_curl_oxseodecoder_parent
     /**
      * @var array
      */
-    private $decodedUrl = array();
+    protected $decodedUrl = array();
 
     /**
      * Overwrite default decodeUrl handling to check for toxid pages
@@ -82,7 +82,7 @@ class toxid_curl_oxseodecoder extends toxid_curl_oxseodecoder_parent
      *
      * @return bool
      */
-    private function isToxidUrl($sSeoUrl)
+    protected function isToxidUrl($sSeoUrl)
     {
         $decodedToxidUrl = $this->detectToxidAndLang($sSeoUrl);
         if (false !== $decodedToxidUrl) {
