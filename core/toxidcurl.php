@@ -328,9 +328,7 @@ class toxidCurl
         $sUrl   = $source . $custom . $page . $param;
         $aPage  = $this->getRemoteContentAndHandleStatusCodes($sUrl);
 
-        // Especially for Wordpress-Frickel-Heinze
-        // Kill everything before the <?xml
-        $this->_sPageContent = preg_replace('/.*<\?xml/ms', '<?xml', $aPage['content']);
+        $this->_sPageContent = $aPage['content'];
 
         // remove non-utf8 characters from string
         //        /
